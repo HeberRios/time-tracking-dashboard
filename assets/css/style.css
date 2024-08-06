@@ -1,28 +1,25 @@
-/* rubik-300 - latin */
 @font-face {
-    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-display: swap;
     font-family: "Rubik";
     font-style: normal;
     font-weight: 300;
-    src: url("../fonts/rubik-v28-latin-300.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+    src: url("../fonts/rubik-v28-latin-300.woff2") format("woff2");
 }
 
-/* rubik-regular - latin */
 @font-face {
-    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-display: swap;
     font-family: "Rubik";
     font-style: normal;
     font-weight: 400;
-    src: url("../fonts/rubik-v28-latin-regular.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+    src: url("../fonts/rubik-v28-latin-regular.woff2") format("woff2");
 }
 
-/* rubik-500 - latin */
 @font-face {
-    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-display: swap;
     font-family: "Rubik";
     font-style: normal;
     font-weight: 500;
-    src: url("../fonts/rubik-v28-latin-500.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+    src: url("../fonts/rubik-v28-latin-500.woff2") format("woff2");
 }
 
 :root {
@@ -31,17 +28,17 @@
     /* ### Primary */
 
     --clr-blue: hsl(246, 80%, 60%);
-    --clr-light-red: hsl(15, 100%, 70%);
+    --clr-light-orange: hsl(15, 100%, 70%);
     --clr-soft-blue: hsl(195, 74%, 62%);
     --clr-light-red: hsl(348, 100%, 68%);
     --clr-lime-green: hsl(145, 58%, 55%);
     --clr-violet: hsl(264, 64%, 52%);
-    --clr-soft-orange: hsl(43, 84%, 65%);
+    --clr-soft-yellow: hsl(43, 84%, 65%);
 
     /* ### Neutral */
 
     --clr-very-dark-blue: hsl(226, 43%, 10%);
-    --clr-dark-lue: hsl(235, 46%, 20%);
+    --clr-dark-blue: hsl(235, 46%, 20%);
     --clr-desaturated-blue: hsl(235, 45%, 61%);
     --clr-pale-blue: hsl(236, 100%, 87%);
 
@@ -126,9 +123,165 @@ h6 {
 
 /* GENERAL STYLES */
 body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+    padding: 3rem 1.5rem;
     font-family: var(--ff-regular);
     color: var(--clr-pale-blue);
     background-color: var(--clr-very-dark-blue);
+}
+
+main {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    max-width: 28.125rem;
+}
+
+/* REPORT CONTAINER STYLES */
+
+.report-container {
+    display: flex;
+    flex-direction: column;
+    border-radius: 0.75rem;
+    overflow: hidden;
+    background-color: var(--clr-dark-blue);
+}
+
+/* TARGET USER CONTAINER STYLES */
+
+.target-user-container {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 2rem 1.5rem;
+    border-radius: 0 0 0.75rem 0.75rem;
+    background-color: var(--clr-blue);
+}
+
+.user-image {
+    max-width: 3.75rem;
+    border-radius: 50%;
+    border: 0.1875rem solid white;
+}
+
+.user-name-container {
+    p {
+        font-size: 0.875rem;
+    }
+}
+
+.user-name {
+    font-size: 1.4375rem;
+    font-weight: var(--fw-light);
+    color: white;
+}
+
+/* REPORT OPTIONS FORM STYLES */
+
+.timeframe-options {
+    display: flex;
+    justify-content: space-between;
+    border: none;
+    padding: 1.125rem 2rem;
+}
+
+input[type="radio"] {
+    position: fixed;
+    opacity: 0;
+}
+
+input[type="radio"]:checked + label {
+    color: white;
+}
+
+/* TASK DASHBOARD STYLES */
+
+.tasks-dashboard {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+.task-container {
+    padding-top: 2.25rem;
+    border-radius: 0.75rem;
+    background-repeat: no-repeat;
+    background-position: top right 1rem;
+    background-position: top -0.25rem right 1rem;
+    background-size: 3.75rem;
+}
+
+.task-container:nth-child(1) {
+    background-color: var(--clr-light-orange);
+    background-image: url("../images/icon-work.svg");
+}
+
+.task-container:nth-child(2) {
+    background-color: var(--clr-soft-blue);
+    background-image: url("../images/icon-play.svg");
+}
+
+.task-container:nth-child(3) {
+    background-color: var(--clr-light-red);
+    background-image: url("../images/icon-study.svg");
+}
+
+.task-container:nth-child(4) {
+    background-position: top right 1rem;
+    background-color: var(--clr-lime-green);
+    background-image: url("../images/icon-exercise.svg");
+}
+
+.task-container:nth-child(5) {
+    background-color: var(--clr-violet);
+    background-image: url("../images/icon-social.svg");
+}
+
+.task-container:nth-child(6) {
+    background-color: var(--clr-soft-yellow);
+    background-image: url("../images/icon-self-care.svg");
+    background-size: 3.375rem;
+}
+
+.task-report-info {
+    padding: 1.5rem;
+    border-radius: 0.75rem;
+    background-color: var(--clr-dark-blue);
+}
+
+.task-name-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.task-name {
+    text-transform: capitalize;
+    font-size: var(--fs-regular);
+    font-weight: var(--fw-bold);
+    color: white;
+}
+
+.task-data-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.timeframe-hours {
+    color: white;
+    font-size: 2rem;
+    font-weight: var(--fw-light);
+}
+
+.previous-timeframe-hours {
+    font-size: 0.875rem;
 }
 
 /* ATTRIBUTION STYLES */
