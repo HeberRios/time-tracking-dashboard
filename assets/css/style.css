@@ -144,6 +144,10 @@ main {
     max-width: 28.125rem;
 }
 
+.checked {
+    color: white;
+}
+
 /* REPORT CONTAINER STYLES */
 
 .report-container {

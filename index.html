@@ -13,6 +13,8 @@
 
         <link rel="stylesheet" href="./assets/css/style.css" />
 
+        <script defer src="./assets/js/main.js"></script>
+
         <title>Frontend Mentor | Time tracking dashboard</title>
     </head>
     <body>
@@ -32,16 +34,29 @@
 
                 <form action="" class="report-options-form">
                     <fieldset class="timeframe-options">
-                        <input type="radio" name="timeframe" id="daily" />
+                        <input
+                            type="radio"
+                            name="timeframe"
+                            id="daily"
+                            value="daily"
+                            autocomplete="off"
+                        />
                         <label for="daily">Daily</label>
                         <input
                             type="radio"
                             name="timeframe"
                             id="weekly"
-                            checked
+                            value="weekly"
+                            autocomplete="off"
                         />
-                        <label for="weekly">Weekly</label>
-                        <input type="radio" name="timeframe" id="monthly" />
+                        <label for="weekly" class="checked">Weekly</label>
+                        <input
+                            type="radio"
+                            name="timeframe"
+                            id="monthly"
+                            value="monthly"
+                            autocomplete="off"
+                        />
                         <label for="monthly">Monthly</label>
                     </fieldset>
                 </form>
@@ -59,10 +74,8 @@
                         </div>
 
                         <div class="task-data-wrapper">
-                            <p class="timeframe-hours">32hrs</p>
-                            <p class="previous-timeframe-hours">
-                                last week - 36hrs
-                            </p>
+                            <p class="timeframe-hours"></p>
+                            <p class="previous-timeframe-hours"></p>
                         </div>
                     </div>
                 </article>
@@ -78,10 +91,8 @@
                         </div>
 
                         <div class="task-data-wrapper">
-                            <p class="timeframe-hours">10hrs</p>
-                            <p class="previous-timeframe-hours">
-                                last week - 8hrs
-                            </p>
+                            <p class="timeframe-hours"></p>
+                            <p class="previous-timeframe-hours"></p>
                         </div>
                     </div>
                 </article>
@@ -97,10 +108,8 @@
                         </div>
 
                         <div class="task-data-wrapper">
-                            <p class="timeframe-hours">4hrs</p>
-                            <p class="previous-timeframe-hours">
-                                last week - 7hrs
-                            </p>
+                            <p class="timeframe-hours"></p>
+                            <p class="previous-timeframe-hours"></p>
                         </div>
                     </div>
                 </article>
@@ -116,10 +125,8 @@
                         </div>
 
                         <div class="task-data-wrapper">
-                            <p class="timeframe-hours">4hrs</p>
-                            <p class="previous-timeframe-hours">
-                                last week - 5hrs
-                            </p>
+                            <p class="timeframe-hours"></p>
+                            <p class="previous-timeframe-hours"></p>
                         </div>
                     </div>
                 </article>
@@ -135,10 +142,8 @@
                         </div>
 
                         <div class="task-data-wrapper">
-                            <p class="timeframe-hours">5hrs</p>
-                            <p class="previous-timeframe-hours">
-                                last week - 10hrs
-                            </p>
+                            <p class="timeframe-hours"></p>
+                            <p class="previous-timeframe-hours"></p>
                         </div>
                     </div>
                 </article>
@@ -146,7 +151,7 @@
                 <article class="task-container">
                     <div class="task-report-info">
                         <div class="task-name-wrapper">
-                            <p class="task-name">self care</p>
+                            <p class="task-name">self careeee</p>
                             <img
                                 src="./assets/images/icon-ellipsis.svg"
                                 alt="3 continuous dots"
@@ -154,10 +159,8 @@
                         </div>
 
                         <div class="task-data-wrapper">
-                            <p class="timeframe-hours">2hrs</p>
-                            <p class="previous-timeframe-hours">
-                                last week - 2hrs
-                            </p>
+                            <p class="timeframe-hours"></p>
+                            <p class="previous-timeframe-hours"></p>
                         </div>
                     </div>
                 </article>
