@@ -41,7 +41,7 @@ function setTimeframeData(timeframeDataArray, timeframeOptionValue) {
 }
 
 async function getDailyData(timeframeOption) {
-    const response = await fetch("../../assets/json/data.json");
+    const response = await fetch("./json/data.json");
     const data = await response.json();
 
     const dataArray = new Array();
@@ -54,7 +54,7 @@ async function getDailyData(timeframeOption) {
 }
 
 async function getWeeklyData(timeframeOption) {
-    const response = await fetch("../../assets/json/data.json");
+    const response = await fetch("./json/data.json");
     const data = await response.json();
 
     const dataArray = new Array();
@@ -67,7 +67,7 @@ async function getWeeklyData(timeframeOption) {
 }
 
 async function getMonthlyData(timeframeOption) {
-    const response = await fetch("../../assets/json/data.json");
+    const response = await fetch("./json/data.json");
     const data = await response.json();
 
     const dataArray = new Array();
