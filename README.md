@@ -33,8 +33,8 @@ Users should be able to:
 
 ### Links
 
--   [Solution URL]()
--   [Live Site URL]()
+-   [Solution URL](https://www.frontendmentor.io/solutions/time-tracking-dashboard-JAlI5l2tN6)
+-   [Live Site URL](https://heberrios.github.io/time-tracking-dashboard/)
 
 ## My process
 
